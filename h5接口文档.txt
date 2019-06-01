@@ -1,0 +1,67 @@
+（post）
+https://api.zhulixc.com
+获取首页数据/home/getdata， {provinceName，cityName，districtName}
+更新银行卡/user/UpdateBank，{token}
+获取分类列表"/Product/GetCommodity", { page: this.page,rows: this.rows, brand: this.brand,classify: this.classify, name: this.name,sort:this.sort,  endAmount:this.endAmount, beginAmount:this.beginAmount,}
+发表评论'/user/Evaluate',this.form
+登录/user/login，{Account，Pwd，openid}
+注册"/user/register/"，{user_pwd,user_account,mCodeData,referral_code,wx_openid}
+更新收货地址"/user/UpdateAddress",{token，addressid，province，city，district，village，details，isdefual，contact，phone}
+删除地址'/user/DelAddress/'+id
+添加地址"/userAddress/insertUserAddress"，{}
+更新头像'/user/UpdateLogo'，{img，token}
+实名提交"/user/nameauth?token="，{Token，ProvinceId，CityId，DistrictId，UserName，UserPassport}
+更新密码'/user/updatepwd/'，{NewPwd，OldPwd}
+获取产品列表/Product/area?area={1/2/3/4}
+创建订单"/order/CreateOrder"，{token，shopId，address_id，cs_link_id，commodity_id，quantity，msg，amount，type}
+店铺入驻"/shop/assign"，{// 店铺ShopImg: "",ShopName: "",Contact: "",Phone: "",Nature: "",Token: "",// 公司名称Company: "",// 营业执照BussImg: "",// 分类FirstClassify: "",SecondClassify: "",ThirdClassify: "",// 省市区Province: "",City: "",District: "",Village: "",AddDetail: "",// 营业执照BussImg: "",// 推荐码ReferralCode: ""}
+运营商入驻"/agency/assign?Token="+this.form.Token，{provinceId，cityId，districtId，contactName，contactPhone，contactEmail，
+ agencyNature，bussinessLicenseUrl，agencyLegalName，agencyCompany，bussinessAccount，agencyPassport，passportFrontUrl，
+ passportBackUrl，bussinessLicense，passportHandheldUrl，transferMoneyUrl}
+
+
+
+
+
+
+（get）
+获取钱包明细 GET /user/getwalletdetails/{类型，1用户钱包 2商铺钱包 3运营商钱包 4创业基金 5积分钱包}
+获取用户银行卡 GET/user/GetBankInfo?token=
+结算倍率"/user/getwithdrawscale"
+结算接口"/user/venturewithdraw?token="+ this.token, {"password":this.pwd,"amount":this.amount}
+获取品牌'/brand/getbrand'
+获取商品详情"/product/GetCommodity?cId=" + this.cid + "&token=" + this.token
+获取商品规格/Product/GetSpecification/" + this.cid
+获取代理商信息"/agency/GetAgencyInfo?token=" + this.token
+消息/user/getmessages?token=B32CAD0D3D78A8C2
+删除消息"/user/delmessage?token="+this.token+"&id="+this.id
+获取用户店铺/shop/getshopinfo?token=B32CAD0D3D78A8C2
+获取省"/sys/GetProvince"
+获取市"/sys/GetCity/"{省id}
+获取区"/sys/GetDistrict/"{市id}
+获取街道"/sys/GetVillage/"{区id}
+微信支付'/wx/pay'
+注册获取验证码"/user/getbindsms/" +{手机号}
+获取用户地址数据"/user/GetUserAddress?token=" + this.token
+获取订单"/order/getlist?token=" + this.token + "&page=" +this.page + "&rows=" + 100 + "&status=" +{订单状态}
+'获取用户信息/user/info?token='
+获取钱包信息"/user/GetUserCashInfo?token=" + this.token + "&page=" + this.page
+获取积分"/user/GetUserIntegralInfo?token=" + this.token + "&page=" + this.page
+退出登录'/user/logout?token='+this.token
+确定收货"/order/Affirm/" + id
+取消订单 "/order/cancel/" + orderId
+获取业绩/user/GetUserPerformance?token='+token
+获取订单详情"/order/getorder/"+this.id+"/?token=" + token
+获取用户地址"/user/GetUserAddress?token="
+获取一级分类"/product/FirstClassify"
+获取二级分类"/product/SecondClassify/" +{一级分类id}
+发现精彩"/flash/GetFlashs?page=1&classify=12"
+店铺轮播"/sysImg/getMainPageSysImg/" + this.shopId + "/5"
+店铺全部商品列表信息"/product/area?shopId"
+店铺市价商品"/product/area?area: 3,shopId: this.shopId
+店铺热卖商品"/product/area?area: 2,shopId: this.shopId
+获取协议"/sys/GetAgreement?type=1"{type=1，type=2，type=3，type=4，type=5 。5个协议接口}
+获取评论数据"/product/GetCommodity?cId="
+
+
+
