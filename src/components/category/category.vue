@@ -8,7 +8,7 @@
           <span style="border: 0" class="city" v-if="city">{{city.substring(0, city.length-1)}}</span>
           <span v-if="district">{{district.substring(0, district.length-1)}}</span>
         </div>
-      </div> -->
+      </div>-->
       <div class="search">
         <img class="searchImg" src="../../../img/index/search/search-2.png">
         <input type="text" placeholder="更多好货助力" @click="goseek">
@@ -89,7 +89,227 @@ export default {
       msgValue: "99+", //消息数量
       district: "",
       city: "",
-      province: ""
+      province: "",
+      all: {
+        status: 200,
+        msg: "OK",
+        data: [
+          {
+            id: 1000,
+            classifyName: "生态市场",
+            classifyLevel: 1,
+            classifyCode: "10000",
+            classifyImgUrl:
+              "https://new.zhulixc.com/api/upload/image/2019-04-24/png/d379ada641184f29b24c9ef46da682da-thumbnail.png",
+            preClassifyId: 0,
+            classifySort: 1,
+            createTime: "2019-04-23T21:59:32.000+0000"
+          },
+          {
+            id: 633,
+            classifyName: "粮油副食",
+            classifyLevel: 1,
+            classifyCode: "00003",
+            classifyImgUrl:
+              "https://new.zhulixc.com/api/upload/image/2019-04-24/png/d379ada641184f29b24c9ef46da682da-thumbnail.png",
+            preClassifyId: 0,
+            classifySort: 2
+          },
+          {
+            id: 74,
+            classifyName: "营养保健",
+            classifyLevel: 1,
+            classifyCode: "00004",
+            classifyImgUrl:
+              "https://new.zhulixc.com/api/upload/image/2019-04-24/png/d379ada641184f29b24c9ef46da682da-thumbnail.png",
+            preClassifyId: 0,
+            classifySort: 3
+          },
+          {
+            id: 404,
+            classifyName: "个护化妆",
+            classifyLevel: 1,
+            classifyCode: "00006",
+            classifyImgUrl:
+              "https://new.zhulixc.com/api/upload/image/2019-04-24/png/d379ada641184f29b24c9ef46da682da-thumbnail.png",
+            preClassifyId: 0,
+            classifySort: 5
+          },
+          {
+            id: 133,
+            classifyName: "居家日用",
+            classifyLevel: 1,
+            classifyCode: "00007",
+            classifyImgUrl:
+              "https://new.zhulixc.com/api/upload/image/2019-04-24/png/d379ada641184f29b24c9ef46da682da-thumbnail.png",
+            preClassifyId: 0,
+            classifySort: 6
+          },
+          {
+            id: 567,
+            classifyName: "手机数码",
+            classifyLevel: 1,
+            classifyCode: "00011",
+            classifyImgUrl:
+              "https://new.zhulixc.com/api/upload/image/2019-04-24/png/d379ada641184f29b24c9ef46da682da-thumbnail.png",
+            preClassifyId: 0,
+            classifySort: 10
+          }
+        ]
+      },
+      a: {
+        status: 200,
+        msg: "OK",
+        data: [
+          {
+            id: 2000,
+            classifyCode: "100001",
+            classifyName: "精品肉类",
+            child: [
+              {
+                id: 4001,
+                classifyName: "肉禽",
+                classifyLevel: 2,
+                classifyCode: "0000111",
+                classifyImgUrl:
+                  "https://new.zhulixc.com/api/upload/image/2019-05-18/jpg/2fe943a1da1543f8818e307347bfd056-thumbnail.jpg",
+                preClassifyId: 2000,
+                classifySort: 1,
+                createTime: "2019-04-24T01:21:39.000+0000"
+              }
+            ]
+          },
+          {
+            id: 4000,
+            classifyCode: "100003",
+            classifyName: "五谷杂粮",
+            child: [
+              {
+                id: 4003,
+                classifyName: "杂粮",
+                classifyLevel: 3,
+                classifyCode: "0000131",
+                classifyImgUrl:
+                  "https://new.zhulixc.com/api/upload/image/2019-05-18/jpg/71371646fb544eba94faa20624d8878a-thumbnail.jpg",
+                preClassifyId: 4000,
+                classifySort: 1,
+                createTime: "2019-04-24T01:54:53.000+0000"
+              }
+            ]
+          }
+        ]
+      },
+
+      b: {
+        status: 200,
+        msg: "OK",
+        data: [
+          {
+            id: 634,
+            classifyName: "食用油",
+            child: [
+              {
+                id: 645,
+                classifyName: "其他油",
+                classifyLevel: 3,
+                classifyCode: "3537345",
+                classifyImgUrl:
+                  "https://new.zhulixc.com/api/upload/image/2019-05-18/jpg/354a4482e9624a49b6c50f3f374cf5ac-thumbnail.jpg",
+                preClassifyId: 634,
+                classifySort: 0
+              }
+            ]
+          }
+        ]
+      },
+      c: {
+        status: 200,
+        msg: "OK",
+        data: [
+          {
+            id: 75,
+            classifyName: "营养健康",
+            child: [
+              {
+                id: 79,
+                classifyName: "缓解疲劳",
+                classifyLevel: 3,
+                classifyCode: "7896753",
+                classifyImgUrl:
+                  "https://new.zhulixc.com/api/upload/image/2019-05-15/jpg/637d97294b344fcf9faa45f7c6c0c8aa-thumbnail.jpg",
+                preClassifyId: 75,
+                classifySort: 0
+              }
+            ]
+          }
+        ]
+      },
+      d: {
+        status: 200,
+        msg: "OK",
+        data: [
+          {
+            id: 405,
+            classifyName: "面部护肤",
+            child: [
+              {
+                id: 412,
+                classifyName: "套装",
+                classifyLevel: 3,
+                classifyCode: "6236732452",
+                classifyImgUrl:
+                  "https://new.zhulixc.com/api/upload/image/2019-05-17/jpg/54368d378e30414aa67b58510ccec1d6-thumbnail.jpg",
+                preClassifyId: 405,
+                classifySort: 0
+              }
+            ]
+          }
+        ]
+      },
+      e: {
+        status: 200,
+        msg: "OK",
+        data: [
+          {
+            id: 157,
+            classifyName: "家居家纺",
+            child: [
+              {
+                id: 159,
+                classifyName: "被子",
+                classifyLevel: 3,
+                classifyCode: "2466234",
+                classifyImgUrl:
+                  "https://new.zhulixc.com/api/upload/image/2019-05-15/jpg/f08e60aadb7a45339a639a03e4748428-thumbnail.jpg",
+                preClassifyId: 157,
+                classifySort: 0
+              }
+            ]
+          }
+        ]
+      },
+      f: {
+        status: 200,
+        msg: "OK",
+        data: [
+          {
+            id: 568,
+            classifyName: "手机",
+            child: [
+              {
+                id: 569,
+                classifyName: "智能手机",
+                classifyLevel: 3,
+                classifyCode: "22634",
+                classifyImgUrl:
+                  "https://new.zhulixc.com/api/upload/image/2019-05-17/jpg/a5fd8396d2e74f188c794e7ba2696c70-thumbnail.jpg",
+                preClassifyId: 568,
+                classifySort: 0
+              }
+            ]
+          }
+        ]
+      }
     };
   },
 
@@ -130,6 +350,7 @@ export default {
         .post(this.HOME + this.SEARCH + "commodityClassify/oneClassifyLevel")
         .then(res => {
           this.categoryList = res.data.data;
+          this.categoryList = this.all.data; //隐藏
           this.id = this.categoryList[0].id;
           const index = window.sessionStorage.getItem("typeIndex") || false;
           if (index) {
@@ -149,6 +370,19 @@ export default {
         )
         .then(res => {
           this.secondlist = res.data.data;
+          if (id == 1000) {
+            this.secondlist = this.a.data;
+          } else if (id == 633) {
+            this.secondlist = this.b.data;
+          } else if (id == 74) {
+            this.secondlist = this.c.data;
+          } else if (id == 404) {
+            this.secondlist = this.d.data;
+          } else if (id == 133) {
+            this.secondlist = this.e.data;
+          } else if (id == 567) {
+            this.secondlist = this.f.data;
+          }
         });
     },
     onClick(key) {

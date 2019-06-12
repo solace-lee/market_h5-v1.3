@@ -518,7 +518,7 @@ export default {
             Toast(res.data.msg);
           }
         })
-        .catch((error) =>  {
+        .catch((error) => {
           Indicator.close();
         });
     },
